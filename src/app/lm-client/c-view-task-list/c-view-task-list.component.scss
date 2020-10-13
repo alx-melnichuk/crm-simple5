@@ -1,0 +1,13 @@
+/*# sourceURL=c-view-task-list.component.scss */
+
+:host {
+  display: block;
+  height: 35em;
+  
+  .c-v-t-l-loading {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}

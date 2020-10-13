@@ -1,0 +1,16 @@
+/*# sourceURL=client-list.component.scss */
+
+:host {
+  display: block;
+  height: 35em;
+
+  .c-l-label {
+    padding: 0.6rem 1rem;
+  }
+  .c-l-loading {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}

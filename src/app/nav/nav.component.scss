@@ -1,0 +1,35 @@
+/*# sourceURL=nav.component.scss */
+
+:host {
+  display: block;
+  
+  ul {
+    list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+
+    li {
+      display: inline-block;
+      padding: 0.6rem 1rem;
+      white-space: nowrap;
+      cursor: pointer;
+
+      &:hover:not(.not-hover) {
+        background-color: rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+      }
+      &:focus {
+        outline: inherit;
+      }
+      &.active {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
+    }
+    li>a.active {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+ 

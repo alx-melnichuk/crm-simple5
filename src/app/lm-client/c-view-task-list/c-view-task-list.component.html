@@ -1,0 +1,15 @@
+<app-c-header
+  [clientId]="clientId"
+>
+</app-c-header>
+<ng-container *ngIf="taskList === undefined; else elseIfLoading">
+  <div class="c-v-t-l-loading">
+    <div>Loading...</div>
+  </div>  
+</ng-container>
+<ng-template #elseIfLoading>
+  <app-task-grid
+    [tasks]="taskList"
+    (clickRow)="doClickRow($event)"
+  ></app-task-grid>
+</ng-template>

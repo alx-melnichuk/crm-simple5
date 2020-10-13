@@ -1,0 +1,16 @@
+<ng-container *ngIf="!!navList && navList.length > 0">
+  <nav>
+    <ul>
+      <ng-container *ngFor="let nav of navList; trackBy: trackById">
+        <ng-container *ngIf="!isDisplayAsLink; else elseIfDisplayAsLink">
+          <li [routerLink]="[nav.routerLink]" [routerLinkActive]="['active']">{{ nav.name }}</li>
+        </ng-container>
+        <ng-template #elseIfDisplayAsLink>
+          <li [ngClass]="{ 'active': rla.isActive }">
+            <a [routerLink]="[nav.routerLink]" routerLinkActive #rla="routerLinkActive">{{ nav.name }}</a>
+          </li>
+        </ng-template>
+      </ng-container>
+    </ul>
+  </nav>
+</ng-container>

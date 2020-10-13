@@ -1,0 +1,15 @@
+<app-t-header
+  [taskId]="taskId"
+  [clientId]="task?.clientId"
+>
+</app-t-header>
+<ng-container *ngIf="task === undefined; else elseIfLoading">
+  <div class="t-v-i-loading">
+    <div>Loading...</div>
+  </div>  
+</ng-container>
+<ng-template #elseIfLoading>
+  <app-t-view
+    [task]="task"
+  ></app-t-view>
+</ng-template>

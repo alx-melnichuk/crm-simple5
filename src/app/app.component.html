@@ -1,0 +1,13 @@
+<header *ngIf="!!navItems && navItems.length > 0">
+  <div class="a-menu-list">
+    <img class="a-logotype" src="/assets/img/logotype.svg">
+    <div class="a-title">{{ title }}</div>
+    <app-nav
+      [navList]="navItems"
+    ></app-nav>
+  </div>
+  <!-- <div>
+    <div>User: {{ userName }}</div>
+  </div> -->
+</header>
+<router-outlet></router-outlet>

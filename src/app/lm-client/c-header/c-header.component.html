@@ -1,0 +1,8 @@
+<div class="c-h-left">
+  <div class="c-h-logo-client"></div>
+  <app-nav *ngIf="!isHideNav"
+    [navList]="navList"
+    [isDisplayAsLink]="true"
+  ></app-nav>
+  <ng-content></ng-content>
+</div>

@@ -1,0 +1,54 @@
+<div class="t-v-wrap mat-elevation-z8">
+  <div class="t-v-block">
+
+    <div class="t-v-box">
+
+      <div class="t-v-row">
+        <div class="t-v-label"> Serial number </div>
+        <div>{{ task.id }}</div>
+      </div>
+
+      <div class="t-v-row">
+        <div class="t-v-label"> Subject </div>
+        <div>{{ task.subject }}</div>
+      </div>
+      
+      <div class="t-v-row">
+        <div class="t-v-label"> Description </div>
+        <div>{{ task.description }}</div>
+      </div>
+
+      <div class="t-v-row">
+        <div class="t-v-label"> Message </div>
+        <div>{{ task.message }}</div>
+      </div>
+
+      <div class="t-v-row">
+        <div class="t-v-label"> Status </div>
+        <div>{{ task.status }}</div>
+      </div>
+
+      <div class="t-v-row">
+        <div class="t-v-label"> Start Date </div>
+        <div>{{ task.startDate | date:'medium' }}</div>
+      </div>
+
+      <div class="t-v-row">
+        <div class="t-v-label">End Date</div>
+        <div>{{ task.endDate | date:'medium' }}</div>
+      </div>
+
+      <div class="t-v-row">
+        <div class="t-v-label"> Warning </div>
+        <div>{{ task.warning }}</div>
+      </div>
+
+      <div class="t-v-row">
+        <div class="t-v-label"> Error </div>
+        <div>{{ task.error }}</div>
+      </div>
+      
+    </div>
+
+  </div>
+</div>

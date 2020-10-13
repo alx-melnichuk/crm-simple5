@@ -1,0 +1,25 @@
+/*# sourceURL=c-header.component.scss */
+
+:host {
+  display: block;
+  padding: 0 1rem 0 1rem;
+  background-color: #7ffbff21;
+
+  .c-h-left {
+    display: flex;
+    align-items: center;
+  }
+  .c-h-logo-client {
+    background-image: url("/assets/lm-client/img/logo-client.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 3.9rem;
+    height: 3.9rem;
+    margin-right: 1rem;
+
+    &:hover {
+      background-image: url("/assets/lm-client/img/logo-client_hov.png");
+    }
+  }
+}

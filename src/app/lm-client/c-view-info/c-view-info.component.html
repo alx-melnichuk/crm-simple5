@@ -1,0 +1,14 @@
+<app-c-header
+  [clientId]="clientId"
+>
+</app-c-header>
+<ng-container *ngIf="client === undefined; else elseIfLoading">
+  <div class="c-v-i-loading">
+    <div>Loading...</div>
+  </div>  
+</ng-container>
+<ng-template #elseIfLoading>
+  <app-c-view
+    [client]="client"
+  ></app-c-view>
+</ng-template>

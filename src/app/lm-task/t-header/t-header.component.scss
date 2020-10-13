@@ -1,0 +1,25 @@
+/*# sourceURL=t-header.component.scss */
+
+:host {
+  display: block;
+  padding: 0 1rem 0 1rem;
+  background-color: #7fffd421;
+
+  .t-h-left {
+    display: flex;
+    align-items: center;
+  }
+  .t-h-logo-client {
+    background-image: url("/assets/lm-task/img/logo-task.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 3.9rem;
+    height: 3.9rem;
+    margin-right: 1rem;
+
+    &:hover {
+      background-image: url("/assets/lm-task/img/logo-task_hov.png");
+    }
+  }
+}

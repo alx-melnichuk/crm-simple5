@@ -1,0 +1,16 @@
+<app-c-header
+  [isHideNav]="true" 
+>
+  <span class="c-l-label">{{ labelName }}</span>
+</app-c-header>
+<ng-container *ngIf="clientList === undefined; else elseIfLoading">
+  <div class="c-l-loading">
+    <div>Loading...</div>
+  </div>  
+</ng-container>
+<ng-template #elseIfLoading>
+  <app-client-grid
+    [clients]="clientList"
+    (clickRow)="doClickRow($event)"
+  ></app-client-grid>
+</ng-template>

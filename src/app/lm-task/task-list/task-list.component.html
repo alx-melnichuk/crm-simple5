@@ -1,0 +1,16 @@
+<app-t-header
+  [isHideNav]="true"
+>
+  <span class="t-l-label">{{ labelName }}</span>
+</app-t-header>
+<ng-container *ngIf="taskList === undefined; else elseIfLoading">
+  <div class="t-l-loading">
+    <div>Loading...</div>
+  </div>  
+</ng-container>
+<ng-template #elseIfLoading>
+  <app-task-grid
+    [tasks]="taskList"
+    (clickRow)="doClickRow($event)"
+  ></app-task-grid>
+</ng-template>

@@ -1,0 +1,16 @@
+/*# sourceURL=task-list.component.scss */
+
+:host {
+  display: block;
+  height: 35em;
+  
+  .t-l-label {
+    padding: 0.6rem 1rem;
+  }
+  .t-l-loading {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
