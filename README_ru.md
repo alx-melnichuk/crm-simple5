@@ -1,6 +1,6 @@
 > Статья на английском языке [README.md](https://github.com/alx-melnichuk/crm-simple5/blob/master/README.md)
 
-## Приложение _Angular_ с подгружаемыми модулями ленивой загрузкой. 
+## Приложение _Angular_ с подгружаемыми модулями ленивой загрузкой.
 
 ### Введение
 
@@ -140,8 +140,6 @@ $ npx ng generate module lm-client/c-view-task-list
 $ npx ng generate component lm-client/c-view-task-list --export=true
 ```
 
-
-
 ### Создадим загружаемый модуль _lm-task_ для работы с задачами.
 
 Добавим в наше приложение доменный модуль по работе с задачами. Этот модуль будет грузиться по ленивой загрузке по маршруту _lm-task_.
@@ -189,13 +187,13 @@ export class LibClientModule {
 
 Результат загрузки маршрута _/lm-client/list_.
 
-![img5-a-client-list.png](https://github.com/alx-melnichuk/crm-simple5/blob/master/img5-a-client-list.png)
+![img5-a-client-list.png](https://raw.githubusercontent.com/alx-melnichuk/crm-simple5/main/img5-a-client-list.png)
 
 В консоли видно, что перед созданием компонента _client-list.component_ выполняется создание нашего сервиса _client-api.service_.
 
 Результат загрузки маршрута _/lm-task_.
 
-![img5-a-task.png](https://github.com/alx-melnichuk/crm-simple5/blob/master/img5-a-task.png)
+![img5-a-task.png](https://raw.githubusercontent.com/alx-melnichuk/crm-simple5/main/img5-a-task.png)
 
 В консоли видно, что перед созданием компонента _lm-task.component_ выполняется повторное создание нашего сервиса _client-api.service_. При повторной загрузке модуля _lib-client.module_ выполняется повторное создание сервиса _client-api.service_.
 
@@ -261,11 +259,11 @@ export class LibClientModule {
 
 Результат загрузки маршрута _/lm-client/list_.
 
-![img5-b-client-list.png](https://github.com/alx-melnichuk/crm-simple5/blob/master/img5-b-client-list.png)
+![img5-b-client-list.png](https://raw.githubusercontent.com/alx-melnichuk/crm-simple5/main/img5-b-client-list.png)
 
 Результат загрузки маршрута _/lm-task_.
 
-![img5-b-task.png](https://github.com/alx-melnichuk/crm-simple5/blob/master/img5-b-task.png)
+![img5-b-task.png](https://raw.githubusercontent.com/alx-melnichuk/crm-simple5/main/img5-b-task.png)
 
 В консоли видно, что при повторном создании модуля _lib-client.module_ сервис _client-api.service_ повторно не создается, а используется единственный экземпляр данного сервиса.
 
@@ -346,8 +344,6 @@ $ npx ng generate component lm-task/t-view --export=true
 $ npx ng generate module lm-task/t-view-info
 $ npx ng generate component lm-task/t-view-info --export=true
 ```
-
-
 
 При создании доменного модуля, который связан с глобальным пунктом меню, мы рассчитываем, что это будет полностью независимый модуль. Но часто возникает ситуация, когда один доменный модуль использует компоненты другого доменного модуля.
 
@@ -436,19 +432,19 @@ task-view-task-view-module.js
 
 Рассмотрим схему загрузи модулей нашего проекта.
 
-![img5-client-view-task-list](https://github.com/alx-melnichuk/crm-simple5/blob/master/img5-client-view-task-list.png)
+![img5-client-view-task-list](https://raw.githubusercontent.com/alx-melnichuk/crm-simple5/main/img5-client-view-task-list.png)
 
 Мы видим, что в модули: _lm-client_ и _lm-task_ импортируются две библиотеки: _lib-client_ и _lib-task_. При этом в библиотеке _lib-task_ находится реализация компонента отображения списка задач _task-grid_, который в дальнейшем используется. И для того, что бы эти библиотеки не загружались повторно они были вынесены оптимизатором в отдельный модуль _default~client-view~task-list_.
 
 Результат загрузки маршрута _/lm-client/view/1/task-list_.
 
-![img5-c-client-task-grid.png](https://github.com/alx-melnichuk/crm-simple5/blob/master/img5-c-client-task-grid.png)
+![img5-c-client-task-grid.png](https://raw.githubusercontent.com/alx-melnichuk/crm-simple5/main/img5-c-client-task-grid.png)
 
 Из рисунка видно, что модуль _default~client-view~task-list_, в котором содержится компонент отображения списка задач _task-grid_ загружен.
 
 Результат загрузки маршрута _/lm-task/list_.
 
-![img5-c-task-task-grid.png](https://github.com/alx-melnichuk/crm-simple5/blob/master/img5-c-task-task-grid.png)
+![img5-c-task-task-grid.png](https://raw.githubusercontent.com/alx-melnichuk/crm-simple5/main/img5-c-task-task-grid.png)
 
 Из рисунка видно, что когда мы перешли на другой маршрут модуль _default~client-view~task-list_ повторно не загружается.
 
